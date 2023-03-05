@@ -1,9 +1,12 @@
 import { React, useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 
 export default function Verify() {
   const [otp, setOtp] = useState(['', '', '', '']);
   const inputRefs = useRef([]);
+  const navigate = useNavigate()
 
   const handleOtpChange = (event, index) => {
     const value = event.target.value;
@@ -25,6 +28,7 @@ export default function Verify() {
     event.preventDefault();
     // perform OTP verification
     console.log(`Verifying OTP: ${otp.join('')}`);
+    navigate('/dashboard')
   };
 
   const handleResendOTP = () => {

@@ -8,7 +8,6 @@ import Dashboard from './components/DashBoardPage';
 function App() {
   return (
     <div className="App">
-      {/* <h1>Hi</h1> */}
      <Router>
           <Routes>
             <Route exact path="/" element={<Login />} />

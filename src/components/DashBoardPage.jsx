@@ -5,6 +5,7 @@ import { SiApplemusic } from "react-icons/si"
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import MusicPlayer from "./MusicPlayer";
+import { useNavigate } from "react-router-dom";
 
 
 const data = [
@@ -31,14 +32,11 @@ const data = [
   }
 ]
 export default function Dashboard() {
-  // const [data, setData] = useState([]);
+  const navigate = useNavigate()
 
-  // useEffect(() => {
-  //   fetch('songs.json')
-  //     .then(response => response.json())
-  //     .then(data => setData(data));
-  //     console.log(data)
-  // }, []);
+  function logout(){
+    navigate('/')
+  }
 
   return (
     <>
@@ -96,7 +94,6 @@ export default function Dashboard() {
             </div>
           )}
         </Popup>
-        {/* <button className="btn">Add Song</button> */}
       </nav>
 
 
@@ -105,7 +102,7 @@ export default function Dashboard() {
         <a href="#top-songs" >Top Songs</a>
         <a href="#recent-songs">Recent Songs</a>
         <a href="#my-playlists">My Playlists</a>
-        <button className="logout">Logout</button>
+        <button className="logout" onClick={logout}>Logout</button>
       </nav>
       <br />
       <table>

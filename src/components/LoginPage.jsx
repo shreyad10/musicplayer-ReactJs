@@ -1,14 +1,18 @@
 import { React, useState } from 'react';
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { useNavigate } from 'react-router-dom';
 
 
 
 export default function Login() {
     const [phoneNumber, setPhoneNumber] = useState("");
+    const navigate = useNavigate()
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
+        navigate('/verify')
+
     };
     return (
         <form onSubmit={handleFormSubmit}>
