@@ -1,38 +1,356 @@
-.App {
-  text-align: center;
-}
+/* {login} */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: purple;
+}
+
+p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.react-tel-input {
+  display: flex;
+  padding-left: 15%;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+
+
+/* {verify} */
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.otp-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin-top: 20px;
+}
+
+input[type="tel"] {
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  text-align: center;
+  margin-left: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+input[type="tel"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px black;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+button[type="submit"] {
+  background-color: purple;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: purple;
+  border-radius: 4px;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(104, 3, 104);
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-left: 0px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* {dashboard} */
+
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  padding-left: 50px;
+  background-color: #f2f2f2;
+  width: 96%;
+}
+
+.song{
+  margin-left: 200px;
+  color: #111;
+  padding: 0rem 1rem;
+  padding-top: 10px;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  border-radius: 4px;
+  background-color: #ffcf3e;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #43a52a;
+}
+
+.sidenav {
+  width: 200px;
+  background-color: rgb(37, 134, 118);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 0.5rem;
+}
+
+.sidenav a {
+  padding: 0.5rem;
+  text-decoration: none;
+  display: block;
   color: white;
+  padding-left: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+h2{
+  padding-left: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidenav a:hover {
+  background-color: #111;
+}
+
+/* {table} */
+table {
+  width: calc(100% - 200px); /* subtract the width of side navigation from 100% */
+  margin-left: 200px; /* set the left margin to the width of side navigation */
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding-top: 4px;
+  text-align: center;
+  padding: 6px;
+}
+
+tr:nth-child(even) td {
+  background-color: #f2f2f2;
+}
+
+tr:hover td {
+  background-color: #ddd;
+}
+
+/* {musicplayer} */
+
+.music-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.music-info {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.music-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.music-artist {
+  font-size: 18px;
+  color: #666;
+}
+
+.music-controls {
+  display: flex;
+  align-items: center;
+}
+
+.play-pause {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 32px;
+  margin-right: 10px;
+  color: black;
+}
+
+.play-pause:focus {
+  outline: none;
+}
+
+.progress-bar {
+  height: 5px;
+  background-color: #ccc;
+  width: 0;
+  transition: width 0.1s linear;
+}
+
+.bottom-player{
+  margin-top: 260px;
+  width: calc(100% - 200px);
+  margin-left: 200px;
+}
+
+.logout{
+  margin-top: 500px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* {popup} */
+
+.modal {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  margin:  auto;
+}
+
+.header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input[type='text'] {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #0062cc;
+}
+
+.close {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 1.5rem;
+  background-color: white;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #333;
 }
