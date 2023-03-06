@@ -1,5 +1,7 @@
 import { React, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -27,16 +29,23 @@ export default function Verify() {
   const handleFormSubmit = (event) => {
     event.preventDefault();
     // perform OTP verification
-    console.log(`Verifying OTP: ${otp.join('')}`);
-    navigate('/dashboard')
+    if (otp.join("").length != 4) {
+      toast.error('Invalid OTP!')
+    }
+    else {
+      console.log(`Verifying OTP: ${otp.join('')}`);
+      toast.success('OTP verified')
+      navigate('/dashboard')
+    }
   };
 
   const handleResendOTP = () => {
-    // handle resend OTP logic
+
+    toast.success('OTP sent successfully!')
   };
 
   const handleUseAnotherNumber = () => {
-    // handle use another number logic
+    navigate('/')
   };
 
   return (
@@ -58,8 +67,8 @@ export default function Verify() {
       <div className="button-container">
         <button type="submit">Verify</button>
       </div>
-        <p><a href="#" onClick={handleResendOTP}>Resend OTP</a></p>
-        <p> <a href="#" onClick={handleUseAnotherNumber}>Use Another Number</a></p>
+      <p><a href="#" onClick={handleResendOTP}>Resend OTP</a></p>
+      <p> <a href="#" onClick={handleUseAnotherNumber}>Use Another Number</a></p>
     </form>
   );
 }
